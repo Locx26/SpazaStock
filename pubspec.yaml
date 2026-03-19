@@ -1,0 +1,22 @@
+name: spaza_stock
+version: 1.0.0
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_local_notifications: ^9.5.3
+  flutter_localizations:
+    sdk: flutter
+  nfc_in_flutter: ^6.0.0
+  sqflite: ^2.0.0+4
+  provider: ^6.0.3
+  internationalization: ^0.17.0
+
+# Add other dependencies as needed
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
