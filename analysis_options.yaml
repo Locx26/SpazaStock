@@ -1,0 +1,12 @@
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  repositories:
+    - 'package:pedantic/pedantic.yaml'
+    
+rules:
+  # General lint rules
+  - unused_import: error
+  - unnecessary_this: warning
+  - prefer_single_quotes: warning
+  - prefer_const_constructors: warning
