@@ -1,0 +1,24 @@
+# Flutter build
+build/
+
+# Flutter dependency directories
+.flutter-plugins
+.flutter-plugins-dependencies
+.flutter-versions
+
+# IntelliJ IDEA
+.idea/
+
+# VS Code
+.vscode/
+
+# Android Studio
+*.iml
+*.ipr
+*.iws
+out/
+
+# Other files
+.dart_tool/
+.pub-cache/
+.pub/
