@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- android/app/src/main/res/xml/nfc_tech_filter.xml -->
+<!-- Defines all NFC technology classes SpazaStock can handle -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <tech-list>
+        <!-- Standard NDEF (most NFC stickers/cards) -->
+        <tech>android.nfc.tech.Ndef</tech>
+    </tech-list>
+    <tech-list>
+        <!-- NDEF Formattable: blank tags that can be formatted -->
+        <tech>android.nfc.tech.NdefFormatable</tech>
+    </tech-list>
+    <tech-list>
+        <!-- ISO 14443-A (MIFARE Classic, MIFARE Ultralight, NFC Type 2) -->
+        <tech>android.nfc.tech.NfcA</tech>
+    </tech-list>
+    <tech-list>
+        <!-- ISO 14443-B (NFC Type 4B) -->
+        <tech>android.nfc.tech.NfcB</tech>
+    </tech-list>
+    <tech-list>
+        <!-- ISO 15693 (NFC Type 5 / RFID) -->
+        <tech>android.nfc.tech.NfcV</tech>
+    </tech-list>
+    <tech-list>
+        <!-- MIFARE Classic (common in cheap NFC tags) -->
+        <tech>android.nfc.tech.MifareClassic</tech>
+    </tech-list>
+    <tech-list>
+        <!-- MIFARE Ultralight (NFC Type 2, very common) -->
+        <tech>android.nfc.tech.MifareUltralight</tech>
+    </tech-list>
+</resources>

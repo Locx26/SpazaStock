@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- ios/Runner/Runner.entitlements -->
+<plist version="1.0">
+<dict>
+    <!-- NFC Tag Reading (REQUIRED for CoreNFC) -->
+    <!-- Must be enabled in Apple Developer Portal → Certificates, IDs & Profiles
+         → Identifier → Capabilities → Near Field Communication Tag Reading -->
+    <key>com.apple.developer.nfc.readersession.formats</key>
+    <array>
+        <string>NDEF</string>
+        <string>TAG</string>
+    </array>
+
+    <!-- Background processing for sync -->
+    <key>com.apple.developer.background-modes</key>
+    <array>
+        <string>background-fetch</string>
+        <string>processing</string>
+    </array>
+
+    <!-- Associated Domains (optional, for web fallback) -->
+    <!-- <key>com.apple.developer.associated-domains</key>
+    <array>
+        <string>applinks:spazastock.app</string>
+    </array> -->
+</dict>
+</plist>

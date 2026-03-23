@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- ios/Runner/Info.plist -->
+<!-- Add these keys to your existing Info.plist -->
+<plist version="1.0">
+<dict>
+    <!-- App name -->
+    <key>CFBundleName</key>
+    <string>SpazaStock</string>
+    <key>CFBundleDisplayName</key>
+    <string>SpazaStock</string>
+
+    <!-- ── CoreNFC: Required keys ─────────────────────────────────────────── -->
+    <!-- Privacy usage description (REQUIRED - App Store rejection without this) -->
+    <key>NFCReaderUsageDescription</key>
+    <string>SpazaStock uses NFC to scan product tags for instant stock tracking and sales recording at your tuckshop.</string>
+
+    <!-- Supported NFC tag types -->
+    <key>com.apple.developer.nfc.readersession.formats</key>
+    <array>
+        <!-- NDEF (most common) -->
+        <string>NDEF</string>
+        <!-- TAG (ISO 7816, ISO 15693, MIFARE, FeliCa) -->
+        <string>TAG</string>
+    </array>
+
+    <!-- Application identifier prefixes for NDEF URI detection -->
+    <key>com.apple.developer.nfc.readersession.iso7816.select-identifiers</key>
+    <array>
+        <!-- SpazaStock custom URI prefix -->
+        <string>urn:spazastock</string>
+    </array>
+
+    <!-- ── Background Tasks (iOS 13+ BGTaskScheduler) ─────────────────────── -->
+    <key>BGTaskSchedulerPermittedIdentifiers</key>
+    <array>
+        <string>com.spazastock.sync</string>
+        <string>com.spazastock.sync.refresh</string>
+    </array>
+
+    <!-- ── Network ─────────────────────────────────────────────────────────── -->
+    <!-- Allow HTTP to localhost for dev (remove in production) -->
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsLocalNetworking</key>
+        <true/>
+        <key>NSExceptionDomains</key>
+        <dict>
+            <key>localhost</key>
+            <dict>
+                <key>NSExceptionAllowsInsecureHTTPLoads</key>
+                <true/>
+            </dict>
+        </dict>
+    </dict>
+
+    <!-- ── Privacy descriptions ───────────────────────────────────────────── -->
+    <key>NSCameraUsageDescription</key>
+    <string>SpazaStock can use the camera to scan product barcodes.</string>
+
+    <!-- ── Supported orientations ─────────────────────────────────────────── -->
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+        <string>UIInterfaceOrientationPortraitUpsideDown</string>
+    </array>
+
+    <!-- ── Flutter engine ─────────────────────────────────────────────────── -->
+    <key>NSPrincipalClass</key>
+    <string>FlutterApplication</string>
+    <key>UIMainStoryboardFile</key>
+    <string>Main</string>
+    <key>UILaunchStoryboardName</key>
+    <string>LaunchScreen</string>
+</dict>
+</plist>
